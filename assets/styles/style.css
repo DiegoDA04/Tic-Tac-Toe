@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: space-around; 
+}
+
+main{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title, 
+.author,
+.status {
+    text-align: center;
+}
+
+.status {
+    margin-bottom: 1rem;
+}
+.container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.board {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    
+    margin-bottom: 2rem;
+}
+ 
+.cell {
+    cursor: pointer;
+    border-radius: .75rem;
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background: white;
+}
+
+.button {
+    cursor: pointer;
+    text-align: center;
+    padding: 1rem 1.5rem; 
+    background: black;
+    color: white;
+    letter-spacing: 1.25px; 
+    border-radius: .5rem; 
+}
+
+.fa-xmark {
+    font-size: 2.5rem;
+    color: red;
+}
+
+.fa-circle {
+    font-size: 2.5rem;
+    color: blue;
+}
