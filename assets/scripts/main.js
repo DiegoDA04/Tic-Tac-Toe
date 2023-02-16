@@ -72,8 +72,7 @@ function handleCellClick(clickedCellEvent) {
     const clickedCell = clickedCellEvent.target;
     const clickedCellIndex = clickedCell.getAttribute('data-cell-index')
 
-
-    if(!gameActive)
+    if(cells[clickedCellIndex] !== ''||  !gameActive)
         return;
 
     handleCellPlayed(clickedCell,clickedCellIndex)
@@ -89,4 +88,4 @@ function handleRestartGame(){
 }
 
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick))
-document.querySelector('.button').addEventListener('click',handleRestartGame);
+document.querySelector('.button').addEventListener('click',handleRestartGame)
